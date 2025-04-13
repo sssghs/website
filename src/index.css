@@ -1,0 +1,335 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import 'leaflet/dist/leaflet.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 99%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 222 47% 22%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 45 95% 56%;
+    --secondary-foreground: 222 47% 22%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+
+    --accent: 222 47% 30%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 47% 22%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .nav-item {
+    @apply relative px-2 py-2 rounded-md text-foreground/90 hover:text-foreground transition-colors duration-200 font-medium;
+  }
+
+  .nav-item::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-school-gold transition-all duration-300 ease-in-out;
+  }
+
+  .nav-item:hover::after {
+    @apply w-full;
+  }
+
+  .nav-item-active {
+    @apply text-foreground;
+  }
+
+  .nav-item-active::after {
+    @apply w-full;
+  }
+
+  .btn-primary {
+    @apply bg-school-navy text-white hover:bg-school-navy/90 px-6 py-3 rounded-md transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-school-gold text-school-navy hover:bg-school-gold/90 px-6 py-3 rounded-md transition-colors duration-200;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 font-serif;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-medium mb-4 text-muted-foreground font-serif;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .image-container {
+    @apply overflow-hidden rounded-lg;
+  }
+
+  .image-zoom {
+    @apply transition-transform duration-500 hover:scale-110;
+  }
+  
+  /* New animation classes */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .hover-glow {
+    @apply transition-shadow duration-300 hover:shadow-lg hover:shadow-school-gold/20;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-school-navy to-school-blue;
+  }
+  
+  .shimmer-effect {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:w-[200%] before:bg-gradient-shine before:animate-shimmer;
+  }
+  
+  .frost-glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+  
+  .animated-border {
+    @apply relative before:absolute before:inset-0 before:rounded-lg before:p-0.5 before:bg-gradient-to-r before:from-school-gold before:to-school-navy before:animate-pan-background;
+  }
+  
+  .hover-rotate {
+    @apply transition-transform duration-500 hover:rotate-3;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.staggered-item {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.staggered-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* New advanced animation classes */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.rotate-in {
+  opacity: 0;
+  transform: rotate(-5deg) scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.rotate-in.visible {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.fade-in-fast {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.fade-in-fast.visible {
+  opacity: 1;
+}
+
+.elastic-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.elastic-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.blur-in {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.8s ease-out, filter 0.8s ease-out;
+}
+
+.blur-in.visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* 3D effect classes */
+.perspective-container {
+  perspective: 1000px;
+}
+
+.tilt-card {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.tilt-card:hover {
+  transform: rotateY(5deg) rotateX(5deg);
+}
+
+/* Advanced scroll effects */
+.parallax-scroll {
+  transform: translateY(0);
+  transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* Shine effect */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: transform 0.7s;
+  opacity: 0;
+}
+
+.shine:hover::after {
+  transform: rotate(30deg) translate(110%, -110%);
+  opacity: 1;
+}
+
+/* Improved scroll reveal animation handler */
+.scroll-reveal {
+  transition-property: transform, opacity;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-up {
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.reveal-down {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+.reveal-right {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.reveal-scale {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.reveal-visible {
+  transform: translate(0) scale(1);
+  opacity: 1;
+}
