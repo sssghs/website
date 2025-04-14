@@ -9,10 +9,10 @@ import EventsList from '../data/events'; // Adjust the path as needed
 const Home = () => {
   // State for animated numbers in stats section
   const [stats, setStats] = useState([
-    { number: 0, target: 35, label: "Years of Excellence" },
-    { number: 0, target: 2500, label: "Students Enrolled" },
-    { number: 0, target: 150, label: "Expert Faculty" },
-    { number: 0, target: 98, label: "College Acceptance" }
+    { number: 0, target: 1000, label: "Students", suffix: '+' },
+    { number: 0, target: 100, label: "Instructors", suffix: '+' },
+    { number: 0, target: 15, label: "Faculty to Student Ratio", prefix: '1:' },
+    { number: 0, target: 98, label: "Success Rate", suffix: '%' }
   ]);
 
   const statsRef = useRef(null);
@@ -43,7 +43,7 @@ const Home = () => {
                 const newStats = [...prevStats];
                 newStats[index] = {
                   ...newStats[index],
-                  number: Math.floor(current) + (index === 3 ? '%' : index === 0 ? '+' : index === 1 ? '+' : index === 2 ? '+' : '')
+                  number: Math.floor(current)
                 };
                 return newStats;
               });
@@ -66,7 +66,7 @@ const Home = () => {
         observer.unobserve(statsRef.current);
       }
     };
-  }, [hasAnimated, stats]);
+  }, [hasAnimated]);
 
   // Get and filter upcoming events
   const allEvents = EventsList();
@@ -98,7 +98,7 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
             <Button asChild className="bg-school-gold text-school-navy hover:bg-school-gold/90 px-8 py-6 text-lg">
-              <Link to="/programs">Explore Programs</Link>
+              <Link to="/curriculum">Explore Programs</Link>
             </Button>
             <Button asChild variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
               <Link to="/contact">Contact Us</Link>
@@ -196,7 +196,7 @@ const Home = () => {
                     <h3 className="text-xl font-bold mb-3 text-school-navy">{program.title}</h3>
                     <p className="text-gray-600 mb-4">{program.description}</p>
                     <Link 
-                      to="/programs" 
+                      to="/curriculum" 
                       className="flex items-center text-school-navy font-medium hover:text-school-gold transition-colors"
                     >
                       Learn More <ArrowRight size={16} className="ml-2" />
@@ -209,7 +209,7 @@ const Home = () => {
 
           <div className="text-center mt-12 animate-on-scroll">
             <Button asChild className="btn-primary">
-              <Link to="/programs">View All Programs</Link>
+              <Link to="/curriculum">View All Programs</Link>
             </Button>
           </div>
         </div>
@@ -221,7 +221,9 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
               <div key={index} className="animate-on-scroll">
-                <div className="text-4xl md:text-5xl font-bold mb-2 text-school-gold">{stat.number}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2 text-school-gold">
+                  {stat.prefix || ''}{stat.number}{stat.suffix || ''}
+                </div>
                 <div className="text-lg">{stat.label}</div>
               </div>
             ))}
@@ -318,7 +320,7 @@ const Home = () => {
                 <Link to="/contact">Schedule a Visit</Link>
               </Button>
               <Button asChild variant="outline" className="bg-transparent border-school-navy text-school-navy hover:bg-school-navy/10 px-8 py-6 text-lg">
-                <Link to="/programs">Learn More</Link>
+                <Link to="/curriculum">Learn More</Link>
               </Button>
             </div>
           </div>

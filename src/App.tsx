@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,8 +12,10 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Admissions from "./pages/Admissions";
 import Events from "./pages/Events";
+import EventDetails from "./pages/Event-Details"; // Import the new component
 import MandatoryDisclosures from "./pages/Mandatory-Disclosures";
 import AllEvents from "./pages/All-Events";
+import AdmissionsForm from "./pages/Apply-Admission";
 
 const queryClient = new QueryClient();
 
@@ -27,13 +28,15 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/about" element={<Layout><About /></Layout>} />
-          <Route path="/programs" element={<Layout><Programs /></Layout>} />
+          <Route path="/curriculum" element={<Layout><Programs /></Layout>} />
           <Route path="/events" element={<Layout><Events /></Layout>} />
+          <Route path="/events/:eventId" element={<Layout><EventDetails /></Layout>} /> {/* New route */}
           <Route path="/campus" element={<Layout><Campus /></Layout>} />
           <Route path="/all-events" element={<Layout><AllEvents /></Layout>} />
           <Route path="/mandatory-disclosures" element={<Layout><MandatoryDisclosures /></Layout>} />
           <Route path="/contact" element={<Layout><Contact /></Layout>} />
           <Route path="/admissions" element={<Layout><Admissions /></Layout>} />
+          <Route path="/apply-admission" element={<Layout><AdmissionsForm /></Layout>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

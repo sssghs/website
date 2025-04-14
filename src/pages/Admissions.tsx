@@ -92,10 +92,10 @@ const Admissions = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button className="bg-school-gold text-school-navy hover:bg-school-gold/80 px-8 py-6 text-lg">
-                Apply Now
+                <Link to="/apply-admission">Apply Now</Link>
               </Button>
               <Button variant="outline" className="border-white bg-white/5 px-8 py-6 text-lg hover:bg-white/10">
-                Request Information
+                  <Link to="/contact">Request Information</Link>
               </Button>
             </div>
           </div>

@@ -222,58 +222,6 @@ const Programs = () => {
         </div>
       </section>
 
-      {/* Special Programs */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Special Programs</h2>
-            <p className="text-lg text-gray-700">
-              Beyond our core academic offerings, we provide specialized programs to enrich the educational experience and meet diverse student needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 staggered-container">
-            {[
-              {
-                icon: <Award className="h-12 w-12 text-school-gold" />,
-                title: "Advanced Placement Program",
-                description: "College-level courses that allow students to earn university credit while still in high school."
-              },
-              {
-                icon: <Users className="h-12 w-12 text-school-gold" />,
-                title: "Student Leadership Program",
-                description: "Opportunities for students to develop leadership skills through real-world experiences and mentoring."
-              },
-              {
-                icon: <BookOpen className="h-12 w-12 text-school-gold" />,
-                title: "STEM Excellence Initiative",
-                description: "Specialized curriculum focusing on science, technology, engineering, and mathematics."
-              },
-              {
-                icon: <Clock className="h-12 w-12 text-school-gold" />,
-                title: "Summer Enrichment Programs",
-                description: "Academic and recreational programs during summer months to continue learning and exploration."
-              }
-            ].map((program, index) => (
-              <Card key={index} className="card-hover staggered-item">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
-                    <div className="mr-4">
-                      {program.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-school-navy">{program.title}</h3>
-                  </div>
-                  <p className="text-gray-700 mb-6">{program.description}</p>
-                  <Button variant="outline" className="text-school-navy border-school-navy hover:bg-school-navy hover:text-white">
-                    Learn More
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">

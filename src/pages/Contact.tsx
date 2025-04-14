@@ -27,7 +27,7 @@ const Contact = () => {
     },
     {
       question: "Who should I contact about my child's attendance?",
-      answer: "For attendance-related matters, please contact our attendance office directly at (123) 456-7892 or email attendance@schoolportfolio.edu."
+      answer: "For attendance-related matters, please contact our attendance office directly at (123) 456-7892 or email attendance@Inspire - The Holistic School.edu."
     },
     {
       question: "How do I reach a specific teacher or staff member?",
@@ -92,9 +92,8 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-school-navy">Phone</h3>
                 <p className="text-gray-700">
-                  Main Office: (123) 456-7890<br />
-                  Admissions: (123) 456-7891<br />
-                  Attendance: (123) 456-7892
+                  Main Office: +91 90001 14727<br />
+                  Admissions: +91 90001 45077
                 </p>
               </CardContent>
             </Card>
@@ -107,9 +106,9 @@ const Contact = () => {
                 <h3 className="text-xl font-bold mb-3 text-school-navy">Email</h3>
                 <p className="text-gray-700">
                   General Inquiries:<br />
-                  info@schoolportfolio.edu<br /><br />
+                  contact@inspireschools.co.in<br /><br />
                   Admissions:<br />
-                  admissions@schoolportfolio.edu
+                  admissions@inspireschools.co.in
                 </p>
               </CardContent>
             </Card>
@@ -121,9 +120,9 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-school-navy">Office Hours</h3>
                 <p className="text-gray-700">
-                  Monday - Friday:<br />
-                  7:30 AM - 4:30 PM<br /><br />
-                  Weekends & Holidays:<br />
+                  Monday - Saturday:<br />
+                  8:20 AM - 4:45 PM<br /><br />
+                  Sundays & Holidays:<br />
                   Closed
                 </p>
               </CardContent>
@@ -271,68 +270,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Department Directory */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Department Directory</h2>
-            <p className="text-lg text-gray-700">
-              Contact information for specific departments.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 staggered-container">
-            {[
-              {
-                department: "Admissions",
-                contact: "admissions@schoolportfolio.edu",
-                phone: "(123) 456-7891"
-              },
-              {
-                department: "Athletics",
-                contact: "athletics@schoolportfolio.edu",
-                phone: "(123) 456-7893"
-              },
-              {
-                department: "Business Office",
-                contact: "business@schoolportfolio.edu",
-                phone: "(123) 456-7894"
-              },
-              {
-                department: "Counseling",
-                contact: "counseling@schoolportfolio.edu",
-                phone: "(123) 456-7895"
-              },
-              {
-                department: "Technology Support",
-                contact: "techsupport@schoolportfolio.edu",
-                phone: "(123) 456-7896"
-              },
-              {
-                department: "Development & Alumni",
-                contact: "alumni@schoolportfolio.edu",
-                phone: "(123) 456-7897"
-              }
-            ].map((dept, index) => (
-              <Card key={index} className="card-hover staggered-item">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 text-school-navy">{dept.department}</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center">
-                      <Mail className="h-5 w-5 text-school-gold mr-3" />
-                      <span className="text-gray-700">{dept.contact}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Phone className="h-5 w-5 text-school-gold mr-3" />
-                      <span className="text-gray-700">{dept.phone}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-school-gold text-school-navy">

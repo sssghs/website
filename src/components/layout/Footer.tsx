@@ -51,7 +51,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/programs" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
+                <Link to="/curriculumn" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
                   Programs
                 </Link>
               </li>
@@ -73,28 +73,18 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4 text-school-gold">Programs</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/programs#elementary-school" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
+                <Link to="/curriculum#elementary-school" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
                   Elementary
                 </Link>
               </li>
               <li>
-                <Link to="/programs#middle-school" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
+                <Link to="/curriculum#middle-school" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
                   Middle School
                 </Link>
               </li>
               <li>
-                <Link to="/programs#high-school" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
+                <Link to="/curriculum#high-school" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
                   High School
-                </Link>
-              </li>
-              <li>
-                <Link to="/programs" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
-                  Advanced Placement
-                </Link>
-              </li>
-              <li>
-                <Link to="/programs" className="text-white/80 hover:text-white transition-colors duration-200 inline-block py-1">
-                  Summer Programs
                 </Link>
               </li>
             </ul>

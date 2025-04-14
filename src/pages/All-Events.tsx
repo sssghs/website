@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import EventsList from '../data/events'; // Adjust path as needed
 import VibrantBubblesAndStarsAnimation from '../components/animations/bubbles-stars';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
+import { Link } from 'react-router-dom';
 
 const EventCard = ({ event }) => {
   return (
@@ -35,9 +36,14 @@ const EventCard = ({ event }) => {
           <span className="text-sm">{event.location}</span>
         </div>
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">{event.description}</p>
-        <Button className="w-full bg-gradient-to-r from-school-navy to-school-blue hover:from-school-blue hover:to-school-navy">
-          <span>View Details</span>
-          <ChevronRight className="h-4 w-4 ml-1" />
+        <Button 
+          asChild 
+          className="w-full bg-gradient-to-r from-school-navy to-school-blue hover:from-school-blue hover:to-school-navy"
+        >
+          <Link to={`/events/${event.id}`}>
+            <span>View Details</span>
+            <ChevronRight className="h-4 w-4 ml-1" />
+          </Link>
         </Button>
       </div>
     </div>

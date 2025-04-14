@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, Clock, MapPin, ChevronRight, Filter, Search, ChevronDown } from 'lucide-react';
+import { Calendar, Clock, MapPin, ChevronRight, Filter, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import EventsList from '../data/events'; // Adjust path as needed
 import VibrantBubblesAndStarsAnimation from '../components/animations/bubbles-stars';
@@ -37,9 +37,11 @@ const EventCard = ({ event }) => {
           <span className="text-sm">{event.location}</span>
         </div>
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">{event.description}</p>
-        <Button className="w-full bg-gradient-to-r from-school-navy to-school-blue hover:from-school-blue hover:to-school-navy">
-          <span>View Details</span>
-          <ChevronRight className="h-4 w-4 ml-1" />
+        <Button asChild className="w-full bg-gradient-to-r from-school-navy to-school-blue hover:from-school-blue hover:to-school-navy">
+          <Link to={`/events/${event.id}`}>
+            <span>View Details</span>
+            <ChevronRight className="h-4 w-4 ml-1" />
+          </Link>
         </Button>
       </div>
     </div>
@@ -50,11 +52,6 @@ const Events = () => {
   useScrollAnimation();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [openFaq, setOpenFaq] = useState(null);
-  
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
   
   const events = EventsList();
   const categories = ['All', 'Academic', 'Arts', 'Career', 'Sports', 'General', 'Community'];
@@ -152,7 +149,7 @@ const Events = () => {
         <div className="text-center mt-12">
           <Button className="bg-school-gold text-school-navy hover:bg-school-gold/90 text-lg px-8 py-6">
             <Link to="/all-events" className="flex items-center">
-            <Calendar className="mr-2 h-5 w-5" />
+              <Calendar className="mr-2 h-5 w-5" />
               View Full Calendar
             </Link>
           </Button>

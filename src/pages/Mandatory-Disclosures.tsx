@@ -114,11 +114,11 @@ const MandatoryDisclosures = () => {
                   </h3>
                 </div>
                 <p className="text-lg" style={{ color: colors.gray[700] }}>
-                  <strong>Total Area:</strong> 5 Acres<br />
+                  <strong>Total Area:</strong> 2 Acres<br />
                   <strong>Built-Up Area:</strong> 20,000 sq.ft.<br />
-                  <strong>Playground Area:</strong> 10,000 sq.ft.<br />
-                  <strong>Classrooms:</strong> 40 Smart Classrooms<br />
-                  <strong>Laboratories:</strong> Physics, Chemistry, Biology, Computer Science
+                  <strong>Playground Area:</strong> 15,000 sq.ft.<br />
+                  <strong>Classrooms:</strong> 27 Smart Classrooms<br />
+                  <strong>Laboratories:</strong> Science, Computer Science, Mathematics
                 </p>
               </CardContent>
             </Card>
@@ -136,10 +136,10 @@ const MandatoryDisclosures = () => {
                   </h3>
                 </div>
                 <p className="text-lg" style={{ color: colors.gray[700] }}>
-                  <strong>Library:</strong> 10,000+ Books, Digital Resources<br />
-                  <strong>Auditorium:</strong> 500 Seating Capacity<br />
-                  <strong>Sports:</strong> Basketball, Football, Swimming<br />
-                  <strong>Other:</strong> Art Studio, Music Room, Medical Room
+                  <strong>Library:</strong> 1000+ Books, 5000+ Digital Resources<br />
+                  <strong>OAT:</strong> 200 Seating Capacity<br />
+                  <strong>Sports:</strong> Basketball, Handball, Volleyball <br />
+                  <strong>Other:</strong> Art Studio, Music Room, Dance Room
                 </p>
               </CardContent>
             </Card>
@@ -245,17 +245,6 @@ const MandatoryDisclosures = () => {
                   </tr>
                 </tbody>
               </table>
-              <p className="mt-4">
-                <a
-                  href="/docs/fee-structure.pdf"
-                  className="underline"
-                  style={{ color: colors.blue.DEFAULT }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Download Detailed Fee Structure
-                </a>
-              </p>
             </CardContent>
           </Card>
         </div>

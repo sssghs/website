@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Calendar, Clock, Users, Library, BookOpen, Coffee, Dumbbell, Music, Palette } from 'lucide-react';
+import { MapPin, Calendar, Clock, Users, Library, BookOpen, Coffee, Dumbbell, Music, Palette, LucideFlame, Lightbulb, Dribbble, Activity } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -106,7 +106,7 @@ const Campus = () => {
               <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full max-w-2xl bg-school-navy/5">
                 <TabsTrigger value="academic" className="data-[state=active]:bg-school-navy data-[state=active]:text-white">Academic</TabsTrigger>
                 <TabsTrigger value="arts" className="data-[state=active]:bg-school-navy data-[state=active]:text-white">Arts</TabsTrigger>
-                <TabsTrigger value="athletics" className="data-[state=active]:bg-school-navy data-[state=active]:text-white">Athletics</TabsTrigger>
+                <TabsTrigger value="sports" className="data-[state=active]:bg-school-navy data-[state=active]:text-white">Sports</TabsTrigger>
                 <TabsTrigger value="community" className="data-[state=active]:bg-school-navy data-[state=active]:text-white">Community</TabsTrigger>
               </TabsList>
             </div>
@@ -147,9 +147,9 @@ const Campus = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
-                    icon: <Music className="h-10 w-10 text-school-gold" />,
-                    title: "Performing Arts Center",
-                    description: "A 400-seat theater with professional sound and lighting for performances, concerts, and presentations."
+                    icon: <LucideFlame className="h-10 w-10 text-school-gold" />, // assuming you're using react-icons
+                    title: "Dance Studio",
+                    description: "A state-of-the-art dance studio with sprung floors, mirrors, and professional sound systems for classes, rehearsals, and performances."
                   },
                   {
                     icon: <Palette className="h-10 w-10 text-school-gold" />,
@@ -175,23 +175,23 @@ const Campus = () => {
               </div>
             </TabsContent>
 
-            <TabsContent value="athletics" className="mt-0 tab-content">
+            <TabsContent value="sports" className="mt-0 tab-content">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
                     icon: <Dumbbell className="h-10 w-10 text-school-gold" />,
                     title: "Athletic Complex",
-                    description: "A multi-purpose gymnasium, fitness center, and indoor track for physical education and competitive sports."
+                    description: "A multi-purpose fitness center, and outdoor track for physical education and competitive sports."
                   },
                   {
-                    icon: <Dumbbell className="h-10 w-10 text-school-gold" />,
+                    icon: <Dribbble className="h-10 w-10 text-school-gold" />,
                     title: "Sports Fields",
-                    description: "Soccer, baseball, and multi-purpose fields with modern turf surfaces for practice and competition."
+                    description: "Basketball, Handball and multi-purpose court with modern turf surfaces for practice and competition."
                   },
                   {
-                    icon: <Dumbbell className="h-10 w-10 text-school-gold" />,
-                    title: "Aquatic Center",
-                    description: "An indoor swimming pool for physical education, swim team practice, and community programs."
+                    icon: <Activity className="h-10 w-10 text-school-gold" />,
+                    title: "Indoor Sports",
+                    description: "An indoor sports room for physical education, and community programs."
                   }
                 ].map((facility, index) => (
                   <Card key={index} className="card-hover">
@@ -216,9 +216,9 @@ const Campus = () => {
                     description: "A comfortable gathering space with lounge areas, study nooks, and a café for socializing and collaboration."
                   },
                   {
-                    icon: <Users className="h-10 w-10 text-school-gold" />,
-                    title: "Dining Commons",
-                    description: "A bright, airy dining hall serving nutritious meals made with fresh, locally-sourced ingredients when possible."
+                    icon: <Lightbulb className="h-10 w-10 text-school-gold" />,
+                    title: "Collaborative Learning Studios",
+                    description: "Flexible, tech-enabled classrooms designed to foster creativity, group projects, and hands-on exploration across subjects."
                   },
                   {
                     icon: <Calendar className="h-10 w-10 text-school-gold" />,
@@ -334,12 +334,8 @@ const Campus = () => {
                   <h4 className="text-lg font-semibold mb-2 text-school-navy">Campus Hours</h4>
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-gray-700">Monday - Friday:</span>
-                      <span className="text-gray-700">8:45 AM - 4:45 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Saturday:</span>
-                      <span className="text-gray-700">9:00 AM - 2:00 PM</span>
+                      <span className="text-gray-700">Monday - Saturday:</span>
+                      <span className="text-gray-700">8:20 AM - 4:45 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-700">Sunday:</span>
