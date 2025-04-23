@@ -89,11 +89,11 @@ const EventsList = (): Event[] => {
       location: "School Grounds and Surrounding Area",
       category: "General",
       description: "Join us for the Haritha Haram initiative as we take part in a mass plantation drive to promote a greener and cleaner environment. Students, staff, and volunteers will plant saplings around the campus and nearby areas.",
-      image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Haritha%2F469584711_122130753434433731_5657256177456611463_n.jpg?alt=media&token=acfe312d-c609-4907-b2e4-64fe870a20c4",
+      image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Haritha%2FHaritha%252F469584711_122130753434433731_5657256177456611463_n.jpg?alt=media&token=61de8de5-6d13-4835-900f-6b92e7eb229c",
       additionalInfo: "Participants are encouraged to bring gardening gloves, hats, and water bottles. Saplings and tools will be provided. Let's make our surroundings lush and vibrant!",
       photos: [
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Haritha%2F469568652_122130753524433731_6065372673596062678_n.jpg?alt=media&token=078643a7-8c0c-4eb1-be47-c807fc17461b",
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Haritha%2F469584711_122130753434433731_5657256177456611463_n.jpg?alt=media&token=acfe312d-c609-4907-b2e4-64fe870a20c4",
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Haritha%2FHaritha%252F469584711_122130753434433731_5657256177456611463_n.jpg?alt=media&token=61de8de5-6d13-4835-900f-6b92e7eb229c",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Haritha%2F469649046_122130753302433731_5442581444574921677_n.jpg?alt=media&token=e86679a0-2076-4d7c-91c2-f49100b1ca12",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Haritha%2F469649341_122130752954433731_3630269289924179280_n.jpg?alt=media&token=8e766bc0-3544-473d-ad89-977bd7b1624b",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Haritha%2F469738233_122130753416433731_1226642678562886963_n.jpg?alt=media&token=354429d4-2bc9-48fd-8576-c518e04d4e6c",
@@ -109,7 +109,7 @@ const EventsList = (): Event[] => {
       location: "School Grounds",
       category: "Cultural",
       description: "Join us in celebrating the spirit of freedom and patriotism on Independence Day. The event features flag hoisting, student performances, speeches, and cultural programs honoring our nation's heritage.",
-      image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2F470022403_122130883118433731_8279656032820294838_n.jpg?alt=media&token=97db48c0-a825-4559-af8e-311dfacd06fc",
+      image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2FIndependence%252F470022403_122130883118433731_8279656032820294838_n.jpg?alt=media&token=d9cfc97f-aafb-4138-8ccf-ae05c0c4cb03",
       photos: [
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2F469644347_122130883244433731_8691785524092999267_n.jpg?alt=media&token=e05c63ce-1afd-49b6-939b-029926ad0fd4",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2F469707275_122130883226433731_5819026529528594709_n.jpg?alt=media&token=c39e8439-f808-47e8-b93f-59d34cb7fb77",
@@ -118,7 +118,7 @@ const EventsList = (): Event[] => {
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2F469791290_122130883130433731_3364541381940238718_n.jpg?alt=media&token=b7185e12-5e75-4f83-bdd6-594c847554bc",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2F469813009_122130883124433731_2388599307650095684_n.jpg?alt=media&token=81518439-42f9-47e5-b8f2-c3904ea77d12",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2F469886806_122130882884433731_7079417164523182232_n.jpg?alt=media&token=bca27dac-32be-4c29-91c9-1a37473ae058",
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2F470022403_122130883118433731_8279656032820294838_n.jpg?alt=media&token=97db48c0-a825-4559-af8e-311dfacd06fc",
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2FIndependence%252F470022403_122130883118433731_8279656032820294838_n.jpg?alt=media&token=d9cfc97f-aafb-4138-8ccf-ae05c0c4cb03",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Independence%2F470057140_122130882710433731_8209899445601171090_n.jpg?alt=media&token=1b79a8e0-d700-4ba6-b500-540e58152a50"
       ],
       requiresRegistration: false
@@ -211,7 +211,7 @@ const EventsList = (): Event[] => {
       "location": "School Grounds",
       "category": "Cultural",
       "description": "A grand celebration of Lord Rama's birth with bhajans, a Ramayana play, and a spectacular world record event featuring 1 Rama & Seeta, 10 characters, 100 Lava & Kusa, 1000 seconds of Kalyanam, and 10000 seconds of devotional dance. A cultural experience to remember!",
-      "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/RamaNavami%2Frama_navami_main.jpg?alt=media&token=abc12345-6789-def0-1234-56789abcdef0",  // Festive spiritual setting with Ramayana theme
+      "image": "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Ram%20Navami%2F06.jpg?alt=media&token=dacfedde-5aac-4976-91da-f2cb5b28529e",  // Festive spiritual setting with Ramayana theme
       "additionalInfo": "Traditional attire is encouraged. Prasadam will be served after the event. Participants in the performance should report backstage by 9:30 AM.",
       "photos": [
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Ram%20Navami%2F01.jpg?alt=media&token=1019ca4c-7d69-47a9-bb9c-e8ee8f715512",

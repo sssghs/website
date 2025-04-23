@@ -85,7 +85,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/building.jpg?alt=media&token=cab5dc2f-6925-4530-88ee-ce5ca4f5f0a6')",
+            backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Building.jpg?alt=media&token=0df8096b-a412-41d2-9e52-af34a4834305')",
             filter: "brightness(80%)"
           }}
         ></div>

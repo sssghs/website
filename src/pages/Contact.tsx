@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, ChevronDown } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ChevronDown, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -15,6 +15,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
 import VibrantBubblesAndStarsAnimation from '@/components/animations/bubbles-stars';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 
@@ -26,6 +27,16 @@ const inquiryTypeMap: { [key: string]: string } = {
   financial: 'Financial Information',
   other: 'Other',
 };
+
+// Custom red marker icon
+const redIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
 
 const Contact = () => {
   useScrollAnimation();
@@ -124,6 +135,14 @@ const Contact = () => {
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
+  };
+
+  // Handle marker click to navigate to Google Maps
+  const handleMarkerClick = () => {
+    const lat = 17.3215037;
+    const lng = 78.1480815;
+    const googleMapsUrl = 'https://www.google.com/maps/place/Sri+Sathya+Sai+grammar+high+school/@17.3215097,78.1431891,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcbe96e9fc76837:0x811e712a45da6cb1!8m2!3d17.3215046!4d78.14806!16s%2Fg%2F11fk46kl70?entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D';
+    window.open(googleMapsUrl, '_blank');
   };
 
   return (
@@ -328,7 +347,7 @@ const Contact = () => {
 
           <div className="h-[400px] md:h-[500px] w-full rounded-lg overflow-hidden shadow-lg animate-on-scroll">
             <MapContainer
-              center={[40.7128, -74.0060]}
+              center={[17.3215037, 78.1480815]}
               zoom={15}
               style={{ height: '100%', width: '100%' }}
               className="z-0"
@@ -338,7 +357,13 @@ const Contact = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               />
-              <Marker position={[40.7128, -74.0060]}>
+              <Marker
+                position={[17.3215037, 78.1480815]}
+                icon={redIcon}
+                eventHandlers={{
+                  click: handleMarkerClick,
+                }}
+              >
                 <Popup>
                   Our School <br /> 123 Education Ave, Scholarlane, SL 12345
                 </Popup>
@@ -399,13 +424,37 @@ const Contact = () => {
               Follow us to stay updated on school news, events, and student achievements.
             </p>
             <div className="flex justify-center space-x-6">
-              {['facebook', 'twitter', 'instagram', 'youtube'].map((platform) => (
+              {[
+                {
+                  platform: 'facebook',
+                  icon: <Facebook className="h-6 w-6" />,
+                  url: 'https://www.facebook.com/profile.php?id=61563011934713&sk=photos', // Replace with your Facebook URL
+                },
+                {
+                  platform: 'twitter',
+                  icon: <Twitter className="h-6 w-6" />,
+                  url: '#', // Replace with your Twitter/X URL
+                },
+                {
+                  platform: 'instagram',
+                  icon: <Instagram className="h-6 w-6" />,
+                  url: '#', // Replace with your Instagram URL
+                },
+                {
+                  platform: 'youtube',
+                  icon: <Youtube className="h-6 w-6" />,
+                  url: 'https://www.youtube.com/@srisathyasaigrammarhighsch5520', // Replace with your YouTube URL
+                },
+              ].map(({ platform, icon, url }) => (
                 <a
                   key={platform}
-                  href="#"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-white/80 rounded-full flex items-center justify-center hover:bg-school-navy hover:text-white transition-colors duration-300"
+                  aria-label={`Follow us on ${platform}`}
                 >
-                  <span className="capitalize">{platform.charAt(0)}</span>
+                  {icon}
                 </a>
               ))}
             </div>

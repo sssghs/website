@@ -30,7 +30,7 @@ const About = () => {
             <div className="animate-on-scroll">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Our Story</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Founded in 1985, Sri Sathya Sai Grammar High School began with a vision to create an educational institution that would provide
+                Founded in 2008, Sri Sathya Sai Grammar High School began with a vision to create an educational institution that would provide
                 students with not just academic knowledge, but also the skills and values needed to succeed in life.
               </p>
               <p className="text-lg text-gray-700 mb-6">
@@ -175,24 +175,24 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 staggered-container">
             {[
               {
-                image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop",
-                name: "Dr. Sarah Johnson",
-                role: "Principal"
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+                name: "Mr. B.Swaroop Reddy",
+                role: "Chairman"
               },
               {
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
-                name: "Michael Thompson",
-                role: "Vice Principal"
-              },
-              {
-                image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop",
-                name: "Dr. Emily Chen",
-                role: "Director of Academics"
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Naidu%20Sir.jpg?alt=media&token=537438fa-66f9-4ed6-98e9-23537e2aa85b",
+                name: "Mr. N.A.Naidu",
+                role: "Director"
               },
               {
                 image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
-                name: "David Williams",
-                role: "Director of Student Affairs"
+                name: "Dr. Arun Mony",
+                role: "Principal (CBSE)"
+              },
+              {
+                image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop",
+                name: "Mrs. Snehalatha",
+                role: "Principal (SSC)"
               }
             ].map((leader, index) => (
               <div key={index} className="staggered-item">
@@ -225,7 +225,7 @@ const About = () => {
               and the supportive community environment create an ideal place for students to grow and thrive."
             </p>
             <div>
-              <p className="font-bold text-xl">Robert Anderson</p>
+              <p className="font-bold text-xl">Mr. P.Nagaraj</p>
               <p className="text-white/80">School Board President</p>
             </div>
           </div>

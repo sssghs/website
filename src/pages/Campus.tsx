@@ -7,10 +7,29 @@ import { Link } from 'react-router-dom';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 import VibrantBubblesAndStarsAnimation from '@/components/animations/bubbles-stars';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
 
 const Campus = () => {
   useScrollAnimation();
   const [activeImage, setActiveImage] = useState<string | null>(null);
+
+  // Custom red marker icon
+  const redIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41],
+  });
+
+  // Handle marker click to navigate to Google Maps
+  const handleMarkerClick = () => {
+    const lat = 17.3215037;
+    const lng = 78.1480815;
+    const googleMapsUrl = 'https://www.google.com/maps/place/Sri+Sathya+Sai+grammar+high+school/@17.3215097,78.1431891,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcbe96e9fc76837:0x811e712a45da6cb1!8m2!3d17.3215046!4d78.14806!16s%2Fg%2F11fk46kl70?entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D';
+    window.open(googleMapsUrl, '_blank');
+  };
 
   const galleryImages = [
     "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1974&auto=format&fit=crop",
@@ -32,7 +51,7 @@ const Campus = () => {
       <VibrantBubblesAndStarsAnimation />
       {/* Hero Section */}
       <section className="relative py-24 bg-school-navy text-white">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1613896483294-b8e0c321ce3d?q=80&w=2070&auto=format&fit=crop')] bg-center bg-cover bg-no-repeat"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Meta%2FCampus.jpg?alt=media&token=71acf43b-e129-42a6-9d51-29d679dc4cee')] bg-center bg-cover bg-no-repeat"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-on-scroll">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Campus</h1>
@@ -147,7 +166,7 @@ const Campus = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
-                    icon: <LucideFlame className="h-10 w-10 text-school-gold" />, // assuming you're using react-icons
+                    icon: <LucideFlame className="h-10 w-10 text-school-gold" />,
                     title: "Dance Studio",
                     description: "A state-of-the-art dance studio with sprung floors, mirrors, and professional sound systems for classes, rehearsals, and performances."
                   },
@@ -305,7 +324,7 @@ const Campus = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 rounded-lg overflow-hidden shadow-lg h-[400px] md:h-[500px] animate-on-scroll">
               <MapContainer
-                center={[40.7128, -74.0060]} // Placeholder coordinates; replace with your school's real coordinates
+                center={[17.3215037, 78.1480815]}
                 zoom={15}
                 style={{ height: '100%', width: '100%' }}
                 className="z-0"
@@ -315,9 +334,15 @@ const Campus = () => {
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <Marker position={[40.7128, -74.0060]}>
+                <Marker
+                  position={[17.3215037, 78.1480815]}
+                  icon={redIcon}
+                  eventHandlers={{
+                    click: handleMarkerClick,
+                  }}
+                >
                   <Popup>
-                    Our School <br /> 123 Education Ave, Scholarlane, SL 12345
+                    Our School <br /> Sri Sathya Sai Grammar High School
                   </Popup>
                 </Marker>
               </MapContainer>

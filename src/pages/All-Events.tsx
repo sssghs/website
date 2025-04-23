@@ -74,7 +74,7 @@ const AllEvents = () => {
       <VibrantBubblesAndStarsAnimation />
       {/* Hero Section */}
       <section className="relative py-24 bg-school-navy text-white">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop')] bg-center bg-cover bg-no-repeat"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Meta%2FEvents.jpg?alt=media&token=9f246d35-c7d8-42e4-ac8f-4d65dc997d50')] bg-center bg-cover bg-no-repeat"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-on-scroll">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white font-serif">

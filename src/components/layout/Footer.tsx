@@ -12,25 +12,51 @@ const Footer = () => {
           {/* School Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-school-navy font-serif font-bold text-lg">S</span>
+              <div className="w-14 h-15 bg-school-navy rounded-full flex items-center justify-center">
+                <img src="/Logo.png" // or "src/assets/logo.png" if you're using Vite or similar
+                  alt="School Logo" 
+                  className="w-full h-full object-contain" 
+                />
               </div>
               <h3 className="font-serif font-bold text-xl">Sri Sathya Sai Grammar High School</h3>
             </div>
             <p className="text-white/80 max-w-xs">
-              Empowering minds and shaping futures through excellence in education since 1985.
+              Empowering minds and shaping futures through excellence in education since 2008.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="text-white/80 hover:text-school-gold transition-colors duration-200" aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-white/80 hover:text-school-gold transition-colors duration-200" aria-label="Twitter">
+            <a href="https://www.facebook.com/profile.php?id=61563011934713&sk=photos" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white/80 hover:text-school-gold transition-colors duration-200" 
+              aria-label="Facebook"
+            >
+              <Facebook size={20} />
+            </a>
+
+              <a href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white/80 hover:text-school-gold transition-colors duration-200" 
+                aria-label="Twitter"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-white/80 hover:text-school-gold transition-colors duration-200" aria-label="Instagram">
+
+              <a href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white/80 hover:text-school-gold transition-colors duration-200" 
+                aria-label="Instagram"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-white/80 hover:text-school-gold transition-colors duration-200" aria-label="YouTube">
+
+              <a href="https://www.youtube.com/@srisathyasaigrammarhighsch5520" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white/80 hover:text-school-gold transition-colors duration-200" 
+                aria-label="YouTube"
+              >
                 <YoutubeIcon size={20} />
               </a>
             </div>
@@ -113,17 +139,6 @@ const Footer = () => {
         {/* Footer Bottom Row */}
         <div className="border-t border-white/10 mt-12 pt-8 text-white/60 relative text-sm">
           <p className="text-center">© {currentYear} Sri Sathya Sai Grammar High School. All Rights Reserved.</p>
-          <p className="absolute right-0 top-1/2 -translate-y-1/2 pr-2 md:pr-4">
-            Built by{' '}
-            <a
-              href="https://www.unifinity.co.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-school-gold hover:underline"
-            >
-              Unifinity
-            </a>
-          </p>
         </div>
       </div>
     </footer>

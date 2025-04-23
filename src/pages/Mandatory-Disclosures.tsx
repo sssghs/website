@@ -21,7 +21,7 @@ const MandatoryDisclosures = () => {
 
       {/* Hero Section */}
       <section className="relative py-24 bg-school-navy text-white">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1594312915251-48db9280c8f1?q=80&w=2070&auto=format&fit=crop')] bg-center bg-cover bg-no-repeat"></div>
+        <div className="absolute inset-0 opacity-20 bg-[url('https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Meta%2FMandatory.jpg?alt=media&token=0adbe97d-e65f-4ef6-9b92-6da9c3ee298e')] bg-center bg-cover bg-no-repeat"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-on-scroll">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -115,9 +115,9 @@ const MandatoryDisclosures = () => {
                 </div>
                 <p className="text-lg" style={{ color: colors.gray[700] }}>
                   <strong>Total Area:</strong> 3.5 Acres<br />
-                  <strong>Built-Up Area:</strong> 20,000 sq.ft.<br />
-                  <strong>Playground Area:</strong> 15,000 sq.ft.<br />
-                  <strong>Classrooms:</strong> 33 Smart Classrooms<br />
+                  <strong>Built-Up Area:</strong> 25,000 sq.ft.<br />
+                  <strong>Playground Area:</strong> 30,000 sq.ft.<br />
+                  <strong>Classrooms:</strong> 40 Smart Classrooms<br />
                   <strong>Laboratories:</strong> Science, Computer Science, Mathematics
                 </p>
               </CardContent>

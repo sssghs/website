@@ -52,8 +52,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-school-navy rounded-full flex items-center justify-center">
-            <span className="text-white font-serif font-bold text-lg">S</span>
+          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+          <img src="/Logo.png" // or "src/assets/logo.png" if you're using Vite or similar
+            alt="School Logo" 
+            className="w-full h-full object-contain" 
+          />
           </div>
           <div className="font-serif font-bold text-xl text-school-navy">Sri Sathya Sai Grammar High School</div>
         </Link>
