@@ -5,55 +5,132 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { useToast } from '@/components/ui/use-toast';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import VibrantBubblesAndStarsAnimation from '@/components/animations/bubbles-stars';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 
+// Inquiry type mapping for display purposes
+const inquiryTypeMap: { [key: string]: string } = {
+  admissions: 'Admissions Information',
+  visit: 'Schedule a Visit',
+  programs: 'Academic Programs',
+  financial: 'Financial Information',
+  other: 'Other',
+};
+
 const Contact = () => {
   useScrollAnimation();
-  const { toast } = useToast();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [submissionSuccess, setSubmissionSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    inquiryType: 'admissions', // Default value
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleInquiryChange = (value: string) => {
+    console.log('Selected Inquiry Type:', value);
+    setFormData((prev) => ({ ...prev, inquiryType: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Validate inquiryType
+    const validInquiryTypes = ['admissions', 'visit', 'programs', 'financial', 'other'];
+    if (!validInquiryTypes.includes(formData.inquiryType)) {
+      toast.error('Please select a valid inquiry type.', {
+        position: 'top-right',
+        autoClose: 5000,
+      });
+      return;
+    }
+
+    console.log('Form Data:', formData);
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch('http://localhost:8000/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSubmissionSuccess(true);
+        toast.success('Message sent successfully!', {
+          position: 'top-right',
+          autoClose: 5000,
+        });
+      } else {
+        toast.error('Something went wrong. Please try again later.', {
+          position: 'top-right',
+          autoClose: 5000,
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('Network error. Please check your connection.', {
+        position: 'top-right',
+        autoClose: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const faqs = [
     {
-      question: "How soon can I expect a response to my inquiry?",
-      answer: "We strive to respond to all inquiries within 1-2 business days. For urgent matters, please call our main office directly."
+      question: 'How soon can I expect a response to my inquiry?',
+      answer:
+        'We strive to respond to all inquiries within 1-2 business days. For urgent matters, please call our main office directly.',
     },
     {
-      question: "How do I schedule a campus tour?",
-      answer: "You can schedule a campus tour by filling out the contact form above, calling our admissions office, or selecting 'Schedule a Visit' from the inquiry type dropdown."
+      question: 'How do I schedule a campus tour?',
+      answer:
+        'You can schedule a campus tour by filling out the contact form above, calling our admissions office, or selecting "Schedule a Visit" from the inquiry type dropdown.',
     },
     {
       question: "Who should I contact about my child's attendance?",
-      answer: "For attendance-related matters, please contact our attendance office directly at (123) 456-7892 or email attendance@Inspire - The Holistic School.edu."
+      answer:
+        'For attendance-related matters, please contact our attendance office directly at (123) 456-7892 or email attendance@Sri Sathya Sai Grammar High School.edu.',
     },
     {
-      question: "How do I reach a specific teacher or staff member?",
-      answer: "You can find contact information for all our faculty and staff in the directory on our school portal. Alternatively, you can call our main office, and they will direct your call."
-    }
+      question: 'How do I reach a specific teacher or staff member?',
+      answer:
+        'You can find contact information for all our faculty and staff in the directory on our school portal. Alternatively, you can call our main office, and they will direct your call.',
+    },
   ];
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent",
-      description: "Thank you for contacting us. We'll get back to you soon!",
-      duration: 5000,
-    });
-
-    // Reset form
-    (e.target as HTMLFormElement).reset();
-  };
-
   return (
     <div>
       <VibrantBubblesAndStarsAnimation />
+      <ToastContainer />
+
       {/* Hero Section */}
       <section className="relative py-24 bg-school-navy text-white">
         <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1564981797816-1043664bf78d?q=80&w=1974&auto=format&fit=crop')] bg-center bg-cover bg-no-repeat"></div>
@@ -78,9 +155,9 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-school-navy">Address</h3>
                 <p className="text-gray-700">
-                  123 Education Ave<br />
-                  Scholarlane, SL 12345<br />
-                  United States
+                  Sri Sathya Sai Grammar High School<br />
+                  Chevella, Ranga Reddy<br />
+                  Telangana - 501503
                 </p>
               </CardContent>
             </Card>
@@ -92,8 +169,8 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-school-navy">Phone</h3>
                 <p className="text-gray-700">
-                  Main Office: +91 90001 14727<br />
-                  Admissions: +91 90001 45077
+                  Main Office: +91 90320 63927<br />
+                  Admissions: +91 63037 08779
                 </p>
               </CardContent>
             </Card>
@@ -106,9 +183,9 @@ const Contact = () => {
                 <h3 className="text-xl font-bold mb-3 text-school-navy">Email</h3>
                 <p className="text-gray-700">
                   General Inquiries:<br />
-                  contact@inspireschools.co.in<br /><br />
+                  contact@sssghs.co.in<br /><br />
                   Admissions:<br />
-                  admissions@inspireschools.co.in
+                  admissions@sssghs.co.in
                 </p>
               </CardContent>
             </Card>
@@ -142,56 +219,99 @@ const Contact = () => {
           </div>
 
           <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg animate-on-scroll">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName">First Name*</Label>
-                  <Input id="firstName" required placeholder="Enter your first name" />
+            {submissionSuccess ? (
+              <div className="p-6 bg-green-100 text-green-800 rounded-lg">
+                <h2 className="text-xl font-semibold mb-2">Message Sent Successfully!</h2>
+                <p>Thank you for contacting us. We'll get back to you soon!</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">First Name*</Label>
+                    <Input
+                      id="firstName"
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Last Name*</Label>
+                    <Input
+                      id="lastName"
+                      required
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="Enter your last name"
+                    />
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="lastName">Last Name*</Label>
-                  <Input id="lastName" required placeholder="Enter your last name" />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email Address*</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input
+                      id="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email Address*</Label>
-                  <Input id="email" type="email" required placeholder="Enter your email" />
+                  <Label htmlFor="inquiry">Inquiry Type*</Label>
+                  <Select onValueChange={handleInquiryChange} value={formData.inquiryType}>
+                    <SelectTrigger id="inquiry">
+                      <SelectValue placeholder="Select an inquiry type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="admissions">Admissions Information</SelectItem>
+                      <SelectItem value="visit">Schedule a Visit</SelectItem>
+                      <SelectItem value="programs">Academic Programs</SelectItem>
+                      <SelectItem value="financial">Financial Information</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
+
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" placeholder="Enter your phone number" />
+                  <Label htmlFor="message">Message*</Label>
+                  <Textarea
+                    id="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="How can we help you?"
+                    className="min-h-[150px]"
+                  />
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="inquiry">Inquiry Type*</Label>
-                <Select>
-                  <SelectTrigger id="inquiry">
-                    <SelectValue placeholder="Select an inquiry type" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="admissions">Admissions Information</SelectItem>
-                    <SelectItem value="visit">Schedule a Visit</SelectItem>
-                    <SelectItem value="programs">Academic Programs</SelectItem>
-                    <SelectItem value="financial">Financial Information</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message">Message*</Label>
-                <Textarea id="message" required placeholder="How can we help you?" className="min-h-[150px]" />
-              </div>
-
-              <div className="flex justify-center pt-4">
-                <Button type="submit" className="bg-school-navy text-white hover:bg-school-navy/90 px-8 py-6">
-                  <Send className="mr-2 h-4 w-4" /> Send Message
-                </Button>
-              </div>
-            </form>
+                <div className="flex justify-center pt-4">
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-school-navy text-white hover:bg-school-navy/90 px-8 py-6"
+                  >
+                    <Send className="mr-2 h-4 w-4" />
+                    {isSubmitting ? 'Submitting...' : 'Send Message'}
+                  </Button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </section>
@@ -270,7 +390,6 @@ const Contact = () => {
         </div>
       </section>
 
-
       {/* CTA Section */}
       <section className="py-20 bg-school-gold text-school-navy">
         <div className="container mx-auto px-4 text-center">
@@ -281,9 +400,9 @@ const Contact = () => {
             </p>
             <div className="flex justify-center space-x-6">
               {['facebook', 'twitter', 'instagram', 'youtube'].map((platform) => (
-                <a 
-                  key={platform} 
-                  href="#" 
+                <a
+                  key={platform}
+                  href="#"
                   className="w-12 h-12 bg-white/80 rounded-full flex items-center justify-center hover:bg-school-navy hover:text-white transition-colors duration-300"
                 >
                   <span className="capitalize">{platform.charAt(0)}</span>

@@ -30,7 +30,7 @@ const About = () => {
             <div className="animate-on-scroll">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Our Story</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Founded in 1985, Inspire - The Holistic School began with a vision to create an educational institution that would provide
+                Founded in 1985, Sri Sathya Sai Grammar High School began with a vision to create an educational institution that would provide
                 students with not just academic knowledge, but also the skills and values needed to succeed in life.
               </p>
               <p className="text-lg text-gray-700 mb-6">
@@ -39,7 +39,7 @@ const About = () => {
                 principles of excellence, integrity, and innovation.
               </p>
               <p className="text-lg text-gray-700">
-                Today, Inspire - The Holistic School stands as a testament to that original vision, with thousands of alumni
+                Today, Sri Sathya Sai Grammar High School stands as a testament to that original vision, with thousands of alumni
                 who have gone on to make significant contributions in various fields around the world.
               </p>
             </div>
@@ -74,11 +74,13 @@ const About = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-school-navy">Our Mission</h3>
                 </div>
-                <p className="text-gray-700">
-                  To provide a transformative educational experience that empowers students to become
-                  intellectually curious, socially responsible, and confident individuals who are prepared
-                  to make positive contributions to society.
-                </p>
+                <ul className="text-gray-700 list-disc list-inside space-y-2">
+                  <li>Create a stimulating and challenging learning environment where students will discover and develop their full potential.</li>
+                  <li>Attain highest academic standards by constant review of CBSE Academic curriculum, engaging the best facilitators and benchmarking standards against the best.</li>
+                  <li>Provides students with an opportunity to participate in activities that promote physical fitness.</li>
+                  <li>Provides a strong platform towards developing ecological and environmental awareness.</li>
+                  <li>Involve all stake holders in the improvement / development process of the school.</li>
+                </ul>
               </CardContent>
             </Card>
 
@@ -90,11 +92,13 @@ const About = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-school-navy">Our Vision</h3>
                 </div>
-                <p className="text-gray-700">
-                  To be recognized as a leading educational institution that inspires excellence, fosters
-                  innovation, and nurtures well-rounded individuals who will become the leaders and change-makers
-                  of tomorrow.
-                </p>
+                <ul className="text-gray-700 list-disc list-inside space-y-2">
+                  <li>To provide and sustain a learning environment with state-of-the-art facilities that foster academic excellence and personal growth.</li>
+                  <li>To develop students into confident, responsible, and compassionate individuals capable of navigating an ever-changing world.</li>
+                  <li>To promote critical thinking, creativity, and a lifelong love of learning.</li>
+                  <li>To cultivate leadership skills, integrity, and a commitment to social justice and environmental stewardship.</li>
+                  <li>To ensure every child is nurtured holistically — intellectually, socially, emotionally, and physically — enabling them to realize their full potential.</li>
+                </ul>
               </CardContent>
             </Card>
           </div>
@@ -217,7 +221,7 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto animate-on-scroll">
             <p className="text-2xl md:text-3xl italic mb-8">
-              "The education provided at Inspire - The Holistic School is truly transformative. The faculty's dedication to excellence
+              "The education provided at Sri Sathya Sai Grammar High School is truly transformative. The faculty's dedication to excellence
               and the supportive community environment create an ideal place for students to grow and thrive."
             </p>
             <div>
@@ -234,7 +238,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Our Accreditations</h2>
             <p className="text-lg text-gray-700">
-              Inspire - The Holistic School is proud to be recognized by these prestigious educational organizations.
+              Sri Sathya Sai Grammar High School is proud to be recognized by these prestigious educational organizations.
             </p>
           </div>
 

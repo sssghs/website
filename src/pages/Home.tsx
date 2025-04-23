@@ -85,7 +85,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2071&auto=format&fit=crop')",
+            backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/building.jpg?alt=media&token=cab5dc2f-6925-4530-88ee-ce5ca4f5f0a6')",
             filter: "brightness(80%)"
           }}
         ></div>
@@ -116,9 +116,9 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Welcome to Inspire - The Holistic School</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Welcome to Sri Sathya Sai Grammar High School</h2>
             <p className="text-lg text-gray-700">
-              At Inspire - The Holistic School, we believe in providing a holistic education that nurtures not just the mind, but also the heart and spirit. Our commitment to excellence in academics, arts, and athletics sets us apart as a leading educational institution.
+              At Sri Sathya Sai Grammar High School, we believe in providing a holistic education that nurtures not just the mind, but also the heart and spirit. Our commitment to excellence in academics, arts, and athletics sets us apart as a leading educational institution.
             </p>
           </div>
 
@@ -167,17 +167,17 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 staggered-container">
             {[
               {
-                image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Primary.jpg?alt=media&token=83c43bdb-caf4-4af2-9349-fb2394a4e9db",
                 title: "Elementary School",
                 description: "Building a strong foundation through engaging and interactive learning."
               },
               {
-                image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2070&auto=format&fit=crop",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Middle.jpg?alt=media&token=c158cb52-6a20-4ec1-be6b-281d5b78bac1",
                 title: "Middle School",
                 description: "Developing critical thinking skills and fostering independence."
               },
               {
-                image: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=2070&auto=format&fit=crop",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/High.png?alt=media&token=a1be04ef-26c7-49f6-aa93-dc570cc06a01",
                 title: "High School",
                 description: "Preparing students for college and beyond through challenging academics."
               }
@@ -237,14 +237,14 @@ const Home = () => {
           <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">What Our Community Says</h2>
             <p className="text-lg text-gray-700">
-              Hear from our students, parents, and alumni about their experiences at Inspire - The Holistic School.
+              Hear from our students, parents, and alumni about their experiences at Sri Sathya Sai Grammar High School.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 staggered-container">
             {[
               {
-                quote: "My child has flourished at Inspire - The Holistic School. The teachers are dedicated and truly care about each student's success.",
+                quote: "My child has flourished at Sri Sathya Sai Grammar High School. The teachers are dedicated and truly care about each student's success.",
                 name: "Ragunath Sharma",
                 role: "Parent"
               },
@@ -313,7 +313,7 @@ const Home = () => {
           <div className="max-w-3xl mx-auto animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Ready to Join Our Community?</h2>
             <p className="text-lg text-school-navy/80 mb-8">
-              Schedule a visit to our campus and discover what makes Inspire - The Holistic School special.
+              Schedule a visit to our campus and discover what makes Sri Sathya Sai Grammar High School special.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-school-navy text-white hover:bg-school-navy/90 px-8 py-6 text-lg">

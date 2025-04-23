@@ -16,6 +16,7 @@ import EventDetails from "./pages/Event-Details"; // Import the new component
 import MandatoryDisclosures from "./pages/Mandatory-Disclosures";
 import AllEvents from "./pages/All-Events";
 import AdmissionsForm from "./pages/Apply-Admission";
+import RegistrationForm from "./pages/Event-Registration";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/events/:eventId" element={<Layout><EventDetails /></Layout>} /> {/* New route */}
           <Route path="/campus" element={<Layout><Campus /></Layout>} />
           <Route path="/all-events" element={<Layout><AllEvents /></Layout>} />
+          <Route path="/events/:eventId/register" element={<RegistrationForm />} />
           <Route path="/mandatory-disclosures" element={<Layout><MandatoryDisclosures /></Layout>} />
           <Route path="/contact" element={<Layout><Contact /></Layout>} />
           <Route path="/admissions" element={<Layout><Admissions /></Layout>} />

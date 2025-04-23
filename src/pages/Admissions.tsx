@@ -88,7 +88,7 @@ const Admissions = () => {
           <div className="max-w-3xl mx-auto text-center animate-on-scroll">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Community</h1>
             <p className="text-xl text-white/90">
-            Welcome to Inspire - The Holistic School. Our admission process is transparent and designed to identify students who will thrive in our nurturing and academically enriching environment.
+            Welcome to Sri Sathya Sai Grammar High School. Our admission process is transparent and designed to identify students who will thrive in our nurturing and academically enriching environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button className="bg-school-gold text-school-navy hover:bg-school-gold/80 px-8 py-6 text-lg">

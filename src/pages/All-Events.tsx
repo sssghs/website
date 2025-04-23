@@ -56,7 +56,7 @@ const AllEvents = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const events = EventsList();
-  const categories = ['All', 'Academic', 'Arts', 'Career', 'Sports', 'General', 'Community'];
+  const categories = ['All', 'Academic', 'Arts', 'Career', 'Sports', 'General', 'Cultural'];
   
 
   const filteredEvents = events
@@ -81,7 +81,7 @@ const AllEvents = () => {
               All Events
             </h1>
             <p className="text-xl text-white/90">
-              Explore our full calendar of events at Inspire - The Holistic School.
+              Explore our full calendar of events at Sri Sathya Sai Grammar High School.
             </p>
           </div>
         </div>

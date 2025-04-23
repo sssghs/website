@@ -114,10 +114,10 @@ const MandatoryDisclosures = () => {
                   </h3>
                 </div>
                 <p className="text-lg" style={{ color: colors.gray[700] }}>
-                  <strong>Total Area:</strong> 2 Acres<br />
+                  <strong>Total Area:</strong> 3.5 Acres<br />
                   <strong>Built-Up Area:</strong> 20,000 sq.ft.<br />
                   <strong>Playground Area:</strong> 15,000 sq.ft.<br />
-                  <strong>Classrooms:</strong> 27 Smart Classrooms<br />
+                  <strong>Classrooms:</strong> 33 Smart Classrooms<br />
                   <strong>Laboratories:</strong> Science, Computer Science, Mathematics
                 </p>
               </CardContent>

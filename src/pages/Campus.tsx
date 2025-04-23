@@ -50,7 +50,7 @@ const Campus = () => {
             <div className="animate-on-scroll">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Welcome to Our Campus</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Situated on 25 acres of beautifully landscaped grounds, our campus provides a safe, inspiring environment for learning and growth. Our facilities blend historic architecture with modern amenities to create the perfect setting for academic excellence.
+                Situated on 3.5 acres of beautifully landscaped grounds, our campus provides a safe, inspiring environment for learning and growth. Our facilities blend historic architecture with modern amenities to create the perfect setting for academic excellence.
               </p>
               <p className="text-lg text-gray-700 mb-6">
                 From our state-of-the-art science labs to our performing arts center, every space on campus is designed to support our educational mission and provide students with the resources they need to excel.
@@ -328,7 +328,7 @@ const Campus = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-school-navy">Address</h4>
-                  <p className="text-gray-700">123 Education Ave<br />Scholarlane, SL 12345</p>
+                  <p className="text-gray-700">Sri Sathya Sai Grammar High School<br />Chevella, Ranga Reddy</p>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-school-navy">Campus Hours</h4>
@@ -385,23 +385,17 @@ const Campus = () => {
                   <div className="h-6 w-6 rounded-full bg-school-gold flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                     <span className="text-school-navy font-bold text-sm">1</span>
                   </div>
-                  <p className="text-gray-700">Solar panels provide 30% of our campus electricity needs.</p>
+                  <p className="text-gray-700">Rainwater collection systems water our campus gardens and playing fields.</p>
                 </div>
                 <div className="flex items-start">
                   <div className="h-6 w-6 rounded-full bg-school-gold flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                     <span className="text-school-navy font-bold text-sm">2</span>
                   </div>
-                  <p className="text-gray-700">Rainwater collection systems water our campus gardens and playing fields.</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="h-6 w-6 rounded-full bg-school-gold flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                    <span className="text-school-navy font-bold text-sm">3</span>
-                  </div>
                   <p className="text-gray-700">Our student-led recycling and composting program diverts 75% of waste from landfills.</p>
                 </div>
                 <div className="flex items-start">
                   <div className="h-6 w-6 rounded-full bg-school-gold flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                    <span className="text-school-navy font-bold text-sm">4</span>
+                    <span className="text-school-navy font-bold text-sm">3</span>
                   </div>
                   <p className="text-gray-700">All new campus construction meets LEED certification standards.</p>
                 </div>

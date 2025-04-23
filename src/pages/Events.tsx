@@ -54,7 +54,7 @@ const Events = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   
   const events = EventsList();
-  const categories = ['All', 'Academic', 'Arts', 'Career', 'Sports', 'General', 'Community'];
+  const categories = ['All', 'Academic', 'Arts', 'Career', 'Sports', 'General', 'Cultural'];
   
   // Define date range: 2 months past to 2 months future from April 13, 2025
   const today = new Date('2025-04-13');
@@ -87,7 +87,7 @@ const Events = () => {
               Upcoming Events
             </h1>
             <p className="text-xl text-white/90">
-              Join us for a vibrant array of activities at Inspire - The Holistic School, from academic showcases to cultural celebrations.
+              Join us for a vibrant array of activities at Sri Sathya Sai Grammar High School, from academic showcases to cultural celebrations.
             </p>
           </div>
         </div>

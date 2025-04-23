@@ -61,26 +61,26 @@ const Programs = () => {
           <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-school-navy">Academic Excellence at Every Level</h2>
             <p className="text-lg text-gray-700">
-              Inspire - The Holistic School offers comprehensive programs from elementary through high school, each designed to foster intellectual curiosity, critical thinking, and a love of learning.
+              Sri Sathya Sai Grammar High School offers comprehensive programs from elementary through high school, each designed to foster intellectual curiosity, critical thinking, and a love of learning.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16 staggered-container">
             {[
               {
-                image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Primary.jpg?alt=media&token=83c43bdb-caf4-4af2-9349-fb2394a4e9db",
                 title: "Elementary School",
                 grades: "Grades K-5",
                 description: "Our elementary program builds a strong foundation in core subjects while nurturing creativity and social development."
               },
               {
-                image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2070&auto=format&fit=crop",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Middle.jpg?alt=media&token=c158cb52-6a20-4ec1-be6b-281d5b78bac1",
                 title: "Middle School",
                 grades: "Grades 6-8",
                 description: "Middle school students explore a diverse curriculum that challenges them intellectually and supports their emotional growth."
               },
               {
-                image: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=2070&auto=format&fit=crop",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/High.png?alt=media&token=a1be04ef-26c7-49f6-aa93-dc570cc06a01",
                 title: "High School",
                 grades: "Grades 9-12",
                 description: "Our high school program prepares students for college and beyond through rigorous academics and leadership opportunities."
@@ -138,7 +138,7 @@ const Programs = () => {
             </div>
             <div className="order-1 lg:order-2 overflow-hidden rounded-lg shadow-lg animate-on-scroll">
             <img 
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop" 
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Primary.jpg?alt=media&token=83c43bdb-caf4-4af2-9349-fb2394a4e9db" 
                 alt="Elementary School" 
                 className="w-full h-auto"
                 loading="lazy"
@@ -154,7 +154,7 @@ const Programs = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="overflow-hidden rounded-lg shadow-lg animate-on-scroll">
               <img 
-                src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2070&auto=format&fit=crop" 
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Middle.jpg?alt=media&token=c158cb52-6a20-4ec1-be6b-281d5b78bac1" 
                 alt="Middle School" 
                 className="w-full h-auto"
                 loading="lazy"
@@ -212,7 +212,7 @@ const Programs = () => {
             </div>
             <div className="order-1 lg:order-2 overflow-hidden rounded-lg shadow-lg animate-on-scroll">
               <img 
-                src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=2070&auto=format&fit=crop" 
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/High.png?alt=media&token=a1be04ef-26c7-49f6-aa93-dc570cc06a01" 
                 alt="High School" 
                 className="w-full h-auto"
                 loading="lazy"
