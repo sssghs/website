@@ -60,7 +60,7 @@ const MandatoryDisclosures = () => {
               </div>
               <ul className="text-lg" style={{ color: colors.gray[700] }}>
                 <li className="mb-2">
-                  <strong>Affiliated to:</strong> Central Board of Secondary Education (CBSE)
+                  <strong>Affiliated to:</strong> Telangana State Board of Secondary Education (To be Affiliated to CBSE)
                 </li>
                 <li className="mb-2">
                   <strong>Affiliation Number:</strong> 1234567
@@ -138,7 +138,7 @@ const MandatoryDisclosures = () => {
                 <p className="text-lg" style={{ color: colors.gray[700] }}>
                   <strong>Library:</strong> 1000+ Books, 5000+ Digital Resources<br />
                   <strong>OAT:</strong> 200 Seating Capacity<br />
-                  <strong>Sports:</strong> Basketball, Handball, Volleyball <br />
+                  <strong>Sports:</strong> Cricket, Handball, Volleyball <br />
                   <strong>Other:</strong> Art Studio, Music Room, Dance Room
                 </p>
               </CardContent>
@@ -270,7 +270,11 @@ const MandatoryDisclosures = () => {
               { title: "Building Safety Certificate", link: "/docs/building-safety-certificate.pdf" },
               { title: "Fire Safety Certificate", link: "/docs/fire-safety-certificate.pdf" },
               { title: "DEO/SELF Certificate for Affiliation", link: "/docs/deo-self-certificate.pdf" },
-              { title: "Health & Sanitation Certificate", link: "/docs/health-sanitation-certificate.pdf" }
+              { title: "Annual Academic Calender", link: "/docs/health-sanitation-certificate.pdf" },
+              { title: "School SMC", link: "/docs/school-smc.pdf" },
+              { title: "PTA", link: "/docs/pta.pdf" },
+              { title: "Fee Structure", link: "/docs/fee-structure.pdf" }
+              
             ].map((doc, index) => (
               <Card key={index} className="card-hover staggered-item">
                 <CardContent className="p-8 flex items-center">
