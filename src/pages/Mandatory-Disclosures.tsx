@@ -264,13 +264,15 @@ const MandatoryDisclosures = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 staggered-container">
             {[
               { title: "Copies of Affiliation", link: "/docs/copies-of-affiliation.pdf" },
-              { title: "Copies of Society or Trust", link: "/docs/copies-of-society-or-trust.pdf" },
-              { title: "NOC Issued", link: "/docs/noc-issued.pdf" },
+              { title: "Copies of Society", link: "/docs/copies-of-society-or-trust.pdf" },
+              { title: "NOC Issued", link: "/docs/State NOC.pdf" },
               { title: "Recognition Certificate", link: "/docs/recognition-certificate.pdf" },
               { title: "Building Safety Certificate", link: "/docs/building-safety-certificate.pdf" },
-              { title: "Fire Safety Certificate", link: "/docs/fire-safety-certificate.pdf" },
+              { title: "Fire Safety Certificate", link: "/docs/Fire Safety.pdf" },
+              { title: "Land Certificate", link: "/docs/Land Certificate.pdf" },
               { title: "DEO/SELF Certificate for Affiliation", link: "/docs/deo-self-certificate.pdf" },
-              { title: "Annual Academic Calender", link: "/docs/health-sanitation-certificate.pdf" },
+              { title: "Sanitary Certificate", link: "/docs/Sanitary Certificate.pdf" }, 
+              { title: "Annual Academic Calender", link: "/docs/annual-academic-calender.pdf" },
               { title: "School SMC", link: "/docs/school-smc.pdf" },
               { title: "PTA", link: "/docs/pta.pdf" },
               { title: "Fee Structure", link: "/docs/fee-structure.pdf" }
