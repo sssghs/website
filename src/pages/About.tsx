@@ -175,7 +175,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 staggered-container">
             {[
               {
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Swaroop%20Sir.jpg?alt=media&token=f5afa5e9-2926-4fbf-9203-080759c8c44c",
                 name: "Mr. B.Swaroop Reddy",
                 role: "Chairman"
               },
@@ -185,12 +185,12 @@ const About = () => {
                 role: "Director"
               },
               {
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Arun%20Sir.jpg?alt=media&token=081332cf-6bd7-4238-b49f-eccccae31912",
                 name: "Dr. Arun Mony",
                 role: "Principal (CBSE)"
               },
               {
-                image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Snehlata%20Mam.jpg?alt=media&token=2d451068-f1af-49b2-a7bb-08c52eb8f636",
                 name: "Mrs. Snehalatha",
                 role: "Principal (SSC)"
               }

@@ -76,12 +76,12 @@ const Campus = () => {
               </p>
               <div className="flex items-center text-school-navy">
                 <MapPin className="mr-2 text-school-gold" />
-                <span>123 Education Ave, Scholarlane, SL 12345</span>
+                <span>Sri Sathya Sai Grammar High School, Chevella, Ranga Reddy</span>
               </div>
             </div>
             <div className="overflow-hidden rounded-lg shadow-lg animate-on-scroll">
               <img 
-                src="https://images.unsplash.com/photo-1613896483294-b8e0c321ce3d?q=80&w=2070&auto=format&fit=crop" 
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Building%2FSchool-1.jpg?alt=media&token=9ae4d7ee-fb3b-49d0-bae9-750bb95492cf" 
                 alt="Campus Overview" 
                 className="w-full h-auto"
                 loading="lazy"

@@ -263,19 +263,18 @@ const MandatoryDisclosures = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 staggered-container">
             {[
-              { title: "Copies of Affiliation", link: "/docs/copies-of-affiliation.pdf" },
               { title: "Copies of Society", link: "/docs/copies-of-society-or-trust.pdf" },
               { title: "NOC Issued", link: "/docs/state-noc.pdf" },
               { title: "Recognition Certificate", link: "/docs/recognition-certificate.pdf" },
               { title: "Building Safety Certificate", link: "/docs/building-safety-certificate.pdf" },
               { title: "Fire Safety Certificate", link: "/docs/fire-safety.pdf" },
-              { title: "Land Certificate", link: "/docs/land-certificate.pdf" },
               { title: "DEO/SELF Certificate for Affiliation", link: "/docs/deo-self-certificate.pdf" },
               { title: "Sanitary Certificate", link: "/docs/sanitary-certificate.pdf" }, 
-              { title: "Annual Academic Calender", link: "/docs/annual-academic-calender.pdf" },
+              { title: "Fee Structure", link: "/docs/fee-structure.pdf" },
+              { title: "Health Sanitation Certificate", link: "/docs/health-sanitation-certificate.pdf" },
               { title: "School SMC", link: "/docs/school-smc.pdf" },
               { title: "PTA", link: "/docs/pta.pdf" },
-              { title: "Fee Structure", link: "/docs/fee-structure.pdf" }
+              { title: "Annual Academic Calender", link: "/docs/annual-academic-calender.pdf" }
               
             ].map((doc, index) => (
               <Card key={index} className="card-hover staggered-item">
