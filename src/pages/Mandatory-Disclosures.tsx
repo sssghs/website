@@ -273,7 +273,7 @@ const MandatoryDisclosures = () => {
               { title: "Fee Structure", link: "/docs/fee-structure.pdf" },
               { title: "Health Sanitation Certificate", link: "/docs/health-sanitation-certificate.pdf" },
               { title: "School SMC", link: "/docs/school-smc.pdf" },
-              { title: "PTA", link: "/docs/pta.pdf" },
+              { title: "PTA", link: "/docs/school-pta.pdf" },
               { title: "Annual Academic Calender", link: "/docs/annual-academic-calender.pdf" }
               
             ].map((doc, index) => (
