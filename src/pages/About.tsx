@@ -180,7 +180,7 @@ const About = () => {
                 role: "Chairman"
               },
               {
-                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Naidu%20Sir.jpg?alt=media&token=537438fa-66f9-4ed6-98e9-23537e2aa85b",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Naidu%20Sir.jpg?alt=media&token=924862df-340c-4a36-88d7-bf1c9e58105f",
                 name: "Mr. N.A.Naidu",
                 role: "Director"
               },
@@ -190,7 +190,7 @@ const About = () => {
                 role: "Principal (CBSE)"
               },
               {
-                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Snehlata%20Mam.jpg?alt=media&token=2d451068-f1af-49b2-a7bb-08c52eb8f636",
+                image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Snehlata%20Mam.jpg?alt=media&token=eb5b36c2-037a-4bab-8dcf-1ecfc2e09e1d",
                 name: "Mrs. Snehalatha",
                 role: "Principal (SSC)"
               }

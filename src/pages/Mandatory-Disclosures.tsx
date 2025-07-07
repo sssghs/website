@@ -136,7 +136,7 @@ const MandatoryDisclosures = () => {
                   </h3>
                 </div>
                 <p className="text-lg" style={{ color: colors.gray[700] }}>
-                  <strong>Library:</strong> 1000+ Books, 5000+ Digital Resources<br />
+                  <strong>Library:</strong> 6000+ Books, 1000+ Digital Resources<br />
                   <strong>OAT:</strong> 200 Seating Capacity<br />
                   <strong>Sports:</strong> Cricket, Handball, Volleyball <br />
                   <strong>Other:</strong> Art Studio, Music Room, Dance Room
@@ -225,23 +225,18 @@ const MandatoryDisclosures = () => {
                 <tbody>
                   <tr>
                     <td className="py-2">Pre-Primary (Nursery-KG)</td>
-                    <td className="py-2">50,000</td>
+                    <td className="py-2">25,000</td>
                     <td className="py-2">Activity Fee: 5,000</td>
                   </tr>
                   <tr>
                     <td className="py-2">Primary (I-V)</td>
-                    <td className="py-2">70,000</td>
+                    <td className="py-2">35,000</td>
                     <td className="py-2">Lab Fee: 3,000</td>
                   </tr>
                   <tr>
-                    <td className="py-2">Secondary (VI-X)</td>
-                    <td className="py-2">85,000</td>
+                    <td className="py-2">Secondary (VI-VIII)</td>
+                    <td className="py-2">55,000</td>
                     <td className="py-2">Lab Fee: 5,000</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2">Senior Secondary (XI-XII)</td>
-                    <td className="py-2">100,000</td>
-                    <td className="py-2">Lab Fee: 7,000</td>
                   </tr>
                 </tbody>
               </table>

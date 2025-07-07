@@ -193,8 +193,6 @@ const EventsList = (): Event[] => {
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Sports%2F11.jpg?alt=media&token=09ecbb6d-712d-4567-8123-943f5ac73078",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Sports%2F12.jpg?alt=media&token=6d2b4727-41e2-4119-b2a9-c59fb0e291a1",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Sports%2F13.jpg?alt=media&token=55d2a595-cf80-4482-9bee-e56cf0572041",
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Sports%2F14.jpg?alt=media&token=bb45fc10-4700-4714-beba-75b3c7fd7ed9",
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Sports%2F15.jpg?alt=media&token=8af215f2-a6cd-45b7-b888-6e819f4ef010",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Sports%2F16.jpg?alt=media&token=859b88d0-2bd1-4f73-8c56-b546aced37b7",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Sports%2F17.jpg?alt=media&token=5cbbc041-40b3-4f54-9ea7-6e39f08c2b27",
         "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Sports%2F18.jpg?alt=media&token=218d9d27-8ea8-476e-bba9-b80975c608f3",
