@@ -187,12 +187,12 @@ const About = () => {
               {
                 image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Arun%20Sir.jpg?alt=media&token=081332cf-6bd7-4238-b49f-eccccae31912",
                 name: "Dr. Arun Mony",
-                role: "Principal (CBSE)"
+                role: "Principal"
               },
               {
                 image: "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Snehlata%20Mam.jpg?alt=media&token=eb5b36c2-037a-4bab-8dcf-1ecfc2e09e1d",
                 name: "Mrs. Snehalatha",
-                role: "Principal (SSC)"
+                role: "Vice Principal"
               }
             ].map((leader, index) => (
               <div key={index} className="staggered-item">

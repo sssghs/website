@@ -63,13 +63,13 @@ const MandatoryDisclosures = () => {
                   <strong>Affiliated to:</strong> Telangana State Board of Secondary Education (To be Affiliated to CBSE)
                 </li>
                 <li className="mb-2">
-                  <strong>Affiliation Number:</strong> 1234567
+                  <strong>Affiliation Number:</strong> -
                 </li>
                 <li className="mb-2">
                   <strong>Status:</strong> Senior Secondary
                 </li>
                 <li className="mb-2">
-                  <strong>Valid Until:</strong> March 31, 2028
+                  <strong>Valid Until:</strong> -
                 </li>
                 <li>
                   <a
