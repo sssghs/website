@@ -32,14 +32,14 @@ const Campus = () => {
   };
 
   const galleryImages = [
-    "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1974&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?q=80&w=1969&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1592303637753-701939374585?q=80&w=1986&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?q=80&w=1949&auto=format&fit=crop",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FSchool.jpg?alt=media&token=d72c5e7a-c41a-4d6a-827e-ca54c72b297f",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FGround.jpg?alt=media&token=406aabb0-cb3a-4473-bd4b-3e46c429090a",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FComputer%20Lab.jpg?alt=media&token=36b2b986-09ce-41ac-879b-0352a2f21953",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FScience%20Lab.jpg?alt=media&token=ce880b71-446b-4e37-abcf-315c373b8b3d",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FSmart%20Class%20Room.jpg?alt=media&token=e8e13fc2-a5d7-482a-8949-e58dc132a1a2",
     "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1986&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1597600159211-d6c104f408d1?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1932&auto=format&fit=crop",
   ];
 
   const closeModal = () => {
@@ -424,11 +424,17 @@ const Campus = () => {
                   </div>
                   <p className="text-gray-700">All new campus construction meets LEED certification standards.</p>
                 </div>
+                <div className="flex items-start">
+                  <div className="h-6 w-6 rounded-full bg-school-gold flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                    <span className="text-school-navy font-bold text-sm">4</span>
+                  </div>
+                  <p className="text-gray-700">Our RO Plant provides clean and safe drinking water, reducing dependency on bottle water and minimizing plastic waste</p>
+                </div>
               </div>
             </div>
             <div className="order-1 lg:order-2 overflow-hidden rounded-lg shadow-lg animate-on-scroll">
               <img 
-                src="https://images.unsplash.com/photo-1548407260-da850faa41e3?q=80&w=1974&auto=format&fit=crop" 
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FRO%20Plant.jpg?alt=media&token=599ce8dd-8757-46c0-8e31-237b27bb044c" 
                 alt="Campus Sustainability" 
                 className="w-full h-auto"
                 loading="lazy"
