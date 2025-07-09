@@ -37,8 +37,8 @@ const Campus = () => {
     "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FComputer%20Lab.jpg?alt=media&token=36b2b986-09ce-41ac-879b-0352a2f21953",
     "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FScience%20Lab.jpg?alt=media&token=ce880b71-446b-4e37-abcf-315c373b8b3d",
     "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FSmart%20Class%20Room.jpg?alt=media&token=e8e13fc2-a5d7-482a-8949-e58dc132a1a2",
-    "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1986&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FMath%20Lab.jpg?alt=media&token=7993adba-cd85-49f6-bf3a-3d6de83bdb2e",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/School%2FLibrary.jpg?alt=media&token=6a8301dc-d403-42ee-95e6-419afd9be498",
     "https://images.unsplash.com/photo-1597600159211-d6c104f408d1?q=80&w=2070&auto=format&fit=crop",
   ];
 
