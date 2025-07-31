@@ -57,11 +57,13 @@ const Events = () => {
   const categories = ['All', 'Academic', 'Arts', 'Career', 'Sports', 'General', 'Cultural'];
   
   // Define date range: 2 months past to 2 months future from April 13, 2025
-  const today = new Date('2025-04-13');
+  const today = new Date();
   const twoMonthsPast = new Date(today);
-  twoMonthsPast.setMonth(today.getMonth() - 2); // Feb 13, 2025
+  twoMonthsPast.setMonth(today.getMonth() - 3);
+
   const twoMonthsFuture = new Date(today);
-  twoMonthsFuture.setMonth(today.getMonth() + 2); // Jun 13, 2025
+  twoMonthsFuture.setMonth(today.getMonth() + 3); // Jun 13, 2025
+
 
   const filteredEvents = events
     .filter(event => {
