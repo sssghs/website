@@ -60,16 +60,16 @@ const MandatoryDisclosures = () => {
               </div>
               <ul className="text-lg" style={{ color: colors.gray[700] }}>
                 <li className="mb-2">
-                  <strong>Affiliated to:</strong> Telangana State Board of Secondary Education (To be Affiliated to CBSE)
+                  <strong>Affiliated to:</strong> Central Board of Secondary Education, Telangana State Board of Secondary Education
                 </li>
                 <li className="mb-2">
-                  <strong>Affiliation Number:</strong> -
+                  <strong>Affiliation Number:</strong> - 3630565
                 </li>
                 <li className="mb-2">
                   <strong>Status:</strong> Senior Secondary
                 </li>
                 <li className="mb-2">
-                  <strong>Valid Until:</strong> -
+                  <strong>Valid Until:</strong> 31/03/2031
                 </li>
                 <li>
                   <a

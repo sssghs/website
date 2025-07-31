@@ -242,13 +242,15 @@ const About = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-12 animate-on-scroll">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="flex items-center justify-center bg-gray-100 rounded-lg p-8 w-64 h-32">
-                <div className="text-xl font-bold text-gray-500">Accreditation Logo {i}</div>
-              </div>
-            ))}
+          <div className="flex items-center justify-center bg-gray-100 rounded-lg w-72 h-40 p-4">
+            <img 
+              src="https://firebasestorage.googleapis.com/v0/b/inspire-the-holistic-school/o/Telangana.jpg?alt=media&token=5421a48b-daf7-47f4-a6dd-5cf923834421" 
+              alt="Telangana Accreditation"
+              className="h-full w-auto object-contain"
+              loading="lazy"
+            />
           </div>
+          
         </div>
       </section>
     </div>
